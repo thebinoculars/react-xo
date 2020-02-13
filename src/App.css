@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0;
 }
 
-.cellCross {
+.cellCross, .colEmptyCross:hover .cell {
   margin: auto;
   margin-top: 0.65%;
   width: 3px;
@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 1.5px;
 }
 
-.cellCross:before {
+.cellCross:before, .colEmptyCross:hover .cell:before {
   background-color: inherit;
   border-radius: inherit;
   height: inherit;
@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotate(90deg);
 }
 
-.cellCircle {
+.cellCircle, .colEmptyCircle:hover .cell {
   margin: 15%;
   width: 70%;
   height: 70%;
@@ -86,12 +86,8 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
 }
 
-.win.colCross {
-  background: #e74c3c;
-}
-
-.win.colCircle {
-  background: #2ecc71;
+.colEmptyCircle:hover, .colEmptyCross:hover, .win.colCross, .win.colCircle {
+  background: #eae3cf;
 }
 
 .waiting {

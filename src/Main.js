@@ -93,7 +93,7 @@ export default class Main extends React.Component {
       let move = item;
       let count = 0;
       const list = [];
-      const temp = [];
+      let temp = [];
       // generate row list
       for (let i = 0; i <= setting.row; i += 1) {
         const step = count !== i ? count : i;
@@ -113,7 +113,11 @@ export default class Main extends React.Component {
         const row = cur[0];
         const col = cur[1];
         if (prev === setting.win) return prev;
-        if (chess[row][col] === chess[r][c]) temp.push([row, col]);
+        if (chess[row][col] === chess[r][c]) {
+          temp.push([row, col]);
+        } else {
+          temp = [];
+        }
         return chess[row][col] === chess[r][c] ? prev + 1 : 0;
       }, 0);
       if (res === setting.win) {
@@ -196,6 +200,8 @@ export default class Main extends React.Component {
                     if (colData) {
                       colClass += colData === HOST ? ' colCross' : ' colCircle';
                       cellClass += colData === HOST ? ' cellCross' : ' cellCircle';
+                    } else if (!winner && player === turn) {
+                      colClass += player === HOST ? ' colEmptyCross' : ' colEmptyCircle';
                     }
                     return (
                       <a href="/" className={colClass} key={col.toString()} onClick={(e) => this.play(row, col, e)}>
