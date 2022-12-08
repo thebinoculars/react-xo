@@ -22,7 +22,7 @@ module.exports = {
   ],
   rules: {
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx"] }],
-    "no-underscore-dangle":  [2, { "allow": ["_id"] }],
+    "no-underscore-dangle": [2, { "allow": ["_id"] }],
     "indent": ["error", 2],
     "react/jsx-indent": ["error", 2],
     "react/jsx-indent-props": ["error", 2],
@@ -39,4 +39,4 @@ module.exports = {
     "valid-typeof": 2,
     "vars-on-top": 0,
   }
-};
+}
