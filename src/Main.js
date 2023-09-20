@@ -5,7 +5,7 @@ import './App.css'
 const setting = {
   row: 40,
   col: 40,
-  win: 5,
+  win: 5
 }
 
 const HOST = 1
@@ -25,6 +25,8 @@ export default class Main extends React.Component {
       turn: HOST,
       wait: false,
       winner: null,
+      lastCol: null,
+      lastRow: null
     }
   }
 
@@ -49,6 +51,8 @@ export default class Main extends React.Component {
 
     // a player tick
     socket.on('play', (data) => {
+      this.setState({ lastCol: data.col })
+      this.setState({ lastRow: data.row })
       this.action(data.row, data.col)
       socket.emit('turn', {
         room: data.room,
@@ -65,18 +69,18 @@ export default class Main extends React.Component {
   play(row, col, e) {
     e.preventDefault()
     const {
-      socket, start, player, turn, room,
+      socket, start, player, turn, room
     } = this.state
     if (start && player === turn) {
       socket.emit('play', {
-        room, row, col, turn,
+        room, row, col, turn
       })
     }
   }
 
   action(r, c) {
     const {
-      chess, turn, player, winner,
+      chess, turn, player, winner
     } = this.state
     // skip on game end or turn player
     if (winner || chess[r][c]) return
@@ -86,7 +90,7 @@ export default class Main extends React.Component {
       { r: 1, c: 1 },
       { r: 1, c: -1 },
       { r: 1, c: 0 },
-      { r: 0, c: 1 },
+      { r: 0, c: 1 }
     ]
     let check = []
     moves.forEach((item) => {
@@ -146,14 +150,14 @@ export default class Main extends React.Component {
       chess: [...Array(setting.row)].map(() => [...Array(setting.col)].map(() => null)),
       check: [],
       start: false,
-      winner: null,
+      winner: null
     })
     socket.emit('wait', { wait: !wait, room })
   }
 
   render() {
     const {
-      chess, check, name, room, start, player, turn, winner,
+      chess, check, name, room, start, player, turn, winner, lastCol, lastRow
     } = this.state
     if (!room) {
       return (
@@ -202,6 +206,9 @@ export default class Main extends React.Component {
                       cellClass += colData === HOST ? ' cellCross' : ' cellCircle'
                     } else if (!winner && player === turn) {
                       colClass += player === HOST ? ' colEmptyCross' : ' colEmptyCircle'
+                    }
+                    if (col === lastCol && row === lastRow) {
+                      colClass += ' last-turn'
                     }
                     return (
                       <a href="/" className={colClass} key={col.toString()} onClick={(e) => this.play(row, col, e)}>

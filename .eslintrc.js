@@ -38,5 +38,7 @@ module.exports = {
     "valid-jsdoc": 0,
     "valid-typeof": 2,
     "vars-on-top": 0,
+    "semi": 0,
+    "comma-dangle": 0
   }
 }
