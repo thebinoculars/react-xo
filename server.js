@@ -23,13 +23,13 @@ io.on('connection', (socket) => {
     if (!room) {
       socket.join(data.room)
       io.to(data.room).emit('join', {
-        player: HOST,
+        player: HOST
       })
     }
     if (room && room.length === 1) {
       socket.join(data.room)
       io.to(data.room).emit('join', {
-        player: GUEST,
+        player: GUEST
       })
       io.to(data.room).emit('start')
     }
@@ -37,7 +37,7 @@ io.on('connection', (socket) => {
   socket.on('turn', (data) => {
     io.to(data.room).emit('turn', {
       room: data.room,
-      turn: data.turn,
+      turn: data.turn
     })
   })
   socket.on('play', (data) => {

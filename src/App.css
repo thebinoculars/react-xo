@@ -9,9 +9,11 @@
 ::-webkit-input-placeholder {
   color: #d1cab9;
 }
+
 :-moz-placeholder {
   color: #d1cab9;
 }
+
 :-ms-input-placeholder {
   color: #d1cab9;
 }
@@ -23,7 +25,12 @@ body {
   min-width: 300px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #eae3cf;
   text-align: center;
   text-transform: uppercase;
@@ -55,7 +62,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0;
 }
 
-.cellCross, .colEmptyCross:hover .cell {
+.cellCross,
+.colEmptyCross:hover .cell {
   margin: auto;
   margin-top: 0.65%;
   width: 3px;
@@ -66,7 +74,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 1.5px;
 }
 
-.cellCross:before, .colEmptyCross:hover .cell:before {
+.cellCross:before,
+.colEmptyCross:hover .cell:before {
   background-color: inherit;
   border-radius: inherit;
   height: inherit;
@@ -77,7 +86,8 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotate(90deg);
 }
 
-.cellCircle, .colEmptyCircle:hover .cell {
+.cellCircle,
+.colEmptyCircle:hover .cell {
   margin: 15%;
   width: 70%;
   height: 70%;
@@ -86,7 +96,10 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
 }
 
-.colEmptyCircle:hover, .colEmptyCross:hover, .win.colCross, .win.colCircle {
+.colEmptyCircle:hover,
+.colEmptyCross:hover,
+.win.colCross,
+.win.colCircle {
   background: #eae3cf;
 }
 
@@ -111,9 +124,9 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 10px;
   border-radius: 5px;
   -moz-border-radius: 5px;
-  box-shadow: inset 0px 1px rgba(255,255,255,0.15), inset 0px -1px rgba(0,0,0,0.1), 0px 3px 15px 3px rgba(75,50,25,0.3);
-  -webkit-box-shadow: inset 0px 1px rgba(255,255,255,0.15), inset 0px -1px rgba(0,0,0,0.1),0px 3px 15px 3px rgba(75,50,25,0.3);
-	-moz-box-shadow: inset 0px 1px rgba(255,255,255,0.15), inset 0px -1px rgba(0,0,0,0.1), 0px 3px 15px 3px rgba(75,50,25,0.3);
+  box-shadow: inset 0px 1px rgba(255, 255, 255, 0.15), inset 0px -1px rgba(0, 0, 0, 0.1), 0px 3px 15px 3px rgba(75, 50, 25, 0.3);
+  -webkit-box-shadow: inset 0px 1px rgba(255, 255, 255, 0.15), inset 0px -1px rgba(0, 0, 0, 0.1), 0px 3px 15px 3px rgba(75, 50, 25, 0.3);
+  -moz-box-shadow: inset 0px 1px rgba(255, 255, 255, 0.15), inset 0px -1px rgba(0, 0, 0, 0.1), 0px 3px 15px 3px rgba(75, 50, 25, 0.3);
 }
 
 .inner {
@@ -123,8 +136,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px;
   border-top: 1px solid white;
   border-bottom: 1px solid #f5f1e4;
-  box-shadow: 0px 1px 2px rgba(100,0,0,0.10), 0px -1px 2px rgba(100,0,0,0.10);
-  -webkit-box-shadow: 0px 1px 2px rgba(100,0,0,0.10), 0px -1px 2px rgba(100,0,0,0.10);
+  box-shadow: 0px 1px 2px rgba(100, 0, 0, 0.10), 0px -1px 2px rgba(100, 0, 0, 0.10);
+  -webkit-box-shadow: 0px 1px 2px rgba(100, 0, 0, 0.10), 0px -1px 2px rgba(100, 0, 0, 0.10);
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 35px;
@@ -137,50 +150,50 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   padding-left: 15px;
   padding-right: 45px;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fcfaf6), color-stop(1, #eae3cf));
-  box-shadow: inset 0px 5px 6px rgba(205,190,165,0.75), inset 0px 0px 2px 1px rgba(205,190,165,0.75), 0px 1px rgba(255,255,255,0.1);
-  -webkit-box-shadow: inset 0px 5px 6px rgba(205,190,165,0.75), inset 0px 0px 2px 1px rgba(205,190,165,0.75), 0px 1px rgba(255,255,255,0.1);
-  -moz-box-shadow: inset 0px 5px 6px rgba(205,190,165,0.75), inset 0px 0px 2px 1px rgba(205,190,165,0.75), 0px 1px rgba(255,255,255,0.1);
-	border-radius: 30px;
-	-moz-border-radius: 30px;
-	height: 45px;
-	width: 100%;
-	color: #97917e;
-	font-weight: bold;
-	font-size: 14px;
-	outline: none;
-	line-height: 18px;
-	transition: all 1s;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fcfaf6), color-stop(1, #eae3cf));
+  box-shadow: inset 0px 5px 6px rgba(205, 190, 165, 0.75), inset 0px 0px 2px 1px rgba(205, 190, 165, 0.75), 0px 1px rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: inset 0px 5px 6px rgba(205, 190, 165, 0.75), inset 0px 0px 2px 1px rgba(205, 190, 165, 0.75), 0px 1px rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: inset 0px 5px 6px rgba(205, 190, 165, 0.75), inset 0px 0px 2px 1px rgba(205, 190, 165, 0.75), 0px 1px rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  height: 45px;
+  width: 100%;
+  color: #97917e;
+  font-weight: bold;
+  font-size: 14px;
+  outline: none;
+  line-height: 18px;
+  transition: all 1s;
 }
 
 .submit {
-	background-color: #b73104;
-	padding: 0px;
-	border: none;
-	margin: 0px;
+  background-color: #b73104;
+  padding: 0px;
+  border: none;
+  margin: 0px;
   outline: none;
-  display:inline-block;
-	font-size: 14px;
-	text-transform: uppercase;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	padding-top: 12px;
-	padding-bottom: 12px;
-	color: white;
-	text-shadow: 0px 1px 2px #660300;
-	margin-top: 10px;
-	width: 100%;
-	text-align: center;
-	cursor: pointer;
-	border: 1px solid #a4381b;
-	border-radius: 30px;
-	-moz-border-radius: 30px;
-	box-shadow: inset 0px 1px rgba(255,185,145,1), 0px 2px 3px rgba(165,55,25,0.75);
-	-webkit-box-shadow: inset 0px 1px rgba(255,185,145,1), 0px 2px 3px rgba(165,55,25,0.75);
-  -moz-box-shadow: inset 0px 1px rgba(255,185,145,1), 0px 2px 3px rgba(165,55,25,0.75);
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: white;
+  text-shadow: 0px 1px 2px #660300;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #a4381b;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  box-shadow: inset 0px 1px rgba(255, 185, 145, 1), 0px 2px 3px rgba(165, 55, 25, 0.75);
+  -webkit-box-shadow: inset 0px 1px rgba(255, 185, 145, 1), 0px 2px 3px rgba(165, 55, 25, 0.75);
+  -moz-box-shadow: inset 0px 1px rgba(255, 185, 145, 1), 0px 2px 3px rgba(165, 55, 25, 0.75);
   -moz-transition: all 1s ease-in;
   -webkit-transition: all 1s ease-in;
   -o-transition: all 1s ease-in;
@@ -191,7 +204,11 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #df620f;
   border: 1px solid #df620f;
   text-shadow: 0px 1px 3px #660300;
-  box-shadow: inset 0px 1px rgba(245,180,107,1), 0px 2px 3px rgba(165,55,25,0.75), 0px 0px 15px 0px rgba(255,115,0,0.65);
-  -webkit-box-shadow: inset 0px 1px rgba(245,180,107,1), 0px 2px 3px rgba(165,55,25,0.75), 0px 0px 15px 0px rgba(255,115,25,0.65);
-  -moz-box-shadow: 	inset 0px 1px rgba(245,180,107,1), 0px 2px 3px rgba(165,55,25,0.75), 0px 0px 15px 0px rgba(255,115,25,0.65);
+  box-shadow: inset 0px 1px rgba(245, 180, 107, 1), 0px 2px 3px rgba(165, 55, 25, 0.75), 0px 0px 15px 0px rgba(255, 115, 0, 0.65);
+  -webkit-box-shadow: inset 0px 1px rgba(245, 180, 107, 1), 0px 2px 3px rgba(165, 55, 25, 0.75), 0px 0px 15px 0px rgba(255, 115, 25, 0.65);
+  -moz-box-shadow: inset 0px 1px rgba(245, 180, 107, 1), 0px 2px 3px rgba(165, 55, 25, 0.75), 0px 0px 15px 0px rgba(255, 115, 25, 0.65);
+}
+
+.last-turn {
+  background-color: #0000cd;
 }
