@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark Theme - ref/react-xo color scheme */
+body {
+  background-color: #2c3e50;
+  color: #eae3cf;
+}
+
+.cell {
+  position: absolute;
+  border: 1px solid #2c3e50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #34495e;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+.cell:hover:not(.filled) {
+  background-color: #3d566e;
+}
+.cell.filled { 
+  cursor: not-allowed;
+  background-color: #34495e;
+}
+.cell.forbidden { 
+  background-color: #4a3d3d;
+  border-color: #e74c3c;
+}
+/* Player-specific hover states - match player colors */
+.cell.hovered-x { 
+  background-color: rgba(46, 204, 113, 0.15);
+  border-color: #2ecc71;
+}
+.cell.hovered-o { 
+  background-color: rgba(231, 76, 60, 0.15);
+  border-color: #e74c3c;
+}
+
+/* Winning cells highlight */
+.cell.winning-cell {
+  background-color: rgba(255, 215, 0, 0.4) !important;
+  border-color: #ffd700 !important;
+  box-shadow: 0 0 8px #ffd700;
+  animation: pulse-win 1s ease-in-out infinite;
+}
+
+@keyframes pulse-win {
+  0%, 100% { box-shadow: 0 0 8px #ffd700; }
+  50% { box-shadow: 0 0 16px #ffd700; }
+}
+
+/* Cell content using Tailwind colors */
+.cell-content { @apply text-xl font-bold; }
+.cell-preview { @apply opacity-50 text-xl font-bold; }
+
+/* Glass effect - dark version */
+.glass-effect {
+  background: rgba(52, 73, 94, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(234, 227, 207, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Game board background */
+.game-board-bg {
+  background-color: #2c3e50;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #2c3e50;
+}
+::-webkit-scrollbar-thumb {
+  background: #34495e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4a6278;
+}
